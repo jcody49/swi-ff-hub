@@ -83,22 +83,11 @@
   /* HEADER */
   header {
     background: #1f1f1f;
-    text-align: center;
+
     border-bottom: 3px solid #e63946;
   }
   
-  .logo {
-    max-width: 480px;
-    margin-bottom: 0.1rem;
-  }
-  
-  .logo-crop {
-    height: 280px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   
   /* Sections */
   section {
@@ -128,7 +117,7 @@
   #intro-split {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 2rem;
+    gap: 3rem;
     align-items: start;
   }
   
@@ -209,3 +198,62 @@
     }
 }
   
+
+
+/*NAV STYLES*/
+.site-header {
+  padding: 1rem 0;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1rem;
+  height: 280px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 2.75rem;
+  padding: 0;
+  margin: 0;
+  font-size:1.15em;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #00A3B4;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #e63946;
+}
+
+.logo-crop {
+  height:220px;
+  overflow: hidden;
+             
+}
+
+
+.logo-crop {
+  width: 340px;    /* match zoom width or close to it */
+  height: 240px;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+}
+
+
+.logo {
+  width: 340px;       /* zoom in */
+  position: relative;
+  top: -15px;         /* shift image up for cropping */
+}
+
