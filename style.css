@@ -195,6 +195,7 @@ footer {
 
   header, section, footer {
     padding: 0 1rem;
+    padding-left: 20px;
   }
 
   .logo {
@@ -204,6 +205,7 @@ footer {
 
   .logo-crop {
     height: 180px;
+    margin-left:50px;
   }
 
   #intro-split {
@@ -301,6 +303,7 @@ footer {
     align-items: center;
     margin-top: 15%;
     justify-content: start;
-    padding-left: 7%;
+    padding-left: 25%;
+    padding-right:15%;
   }
 }
