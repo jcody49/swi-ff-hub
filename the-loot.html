@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SWI FF Hub - The Loot</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-crop">
+      <img src="assets/logo.png" alt="SWI FF Hub Logo" class="logo" />
+      <img src="assets/logo-icon.png" alt="SWI FF Hub Icon" class="logo-icon" />
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#">League History</a></li>
+        <li><a href="#">Draft Party</a></li>
+        <li><a href="#">News & Updates</a></li>
+        <li><a href="#">Side Bets</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="overview-wrapper">
+
+        <div style="text-align: center!important;">
+            <h1>Loot Overview</h1>
+        </div>
+        
+        <div class="overview-tables">
+          <table class="overview-table">
+            <thead><tr><th>Payouts</th></tr></thead>
+            <tbody>
+              <tr><td>1st Place: $150</td></tr>
+              <tr><td>2nd Place: $75</td></tr>
+              <tr><td>3rd Place: $25</td></tr>
+            </tbody>
+          </table>
+      
+          <table class="overview-table">
+            <thead><tr><th>Best Week</th></tr></thead>
+            <tbody>
+              <tr><td>$25 to the highest team score in a week</td></tr>
+            </tbody>
+          </table>
+      
+          <table class="overview-table">
+            <thead><tr><th>Benchwarmers Week</th></tr></thead>
+            <tbody>
+              <tr><td>Whichever team had the benched player with the most points in Benchwarmer's week gets $25</td></tr>
+            </tbody>
+          </table>
+      
+          <table class="overview-table">
+            <thead><tr><th>Bad Beat</th></tr></thead>
+            <tbody>
+              <tr><td>$25 to the highest-scoring loss</td></tr>
+            </tbody>
+          </table>
+      
+          <table class="overview-table">
+            <thead><tr><th>Survivor</th></tr></thead>
+            <tbody>
+              <tr><td>Lowest scorer dropped weekly until one remains--winner gets $25</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <section id="side-bet-updates">
+
+        <div class="side-bet-update">
+          <h3>Survivor Update</h3>
+          <iframe src="URL_FOR_SURVIVOR_IFRAME" title="Survivor Bet Updates"></iframe>
+        </div>
+      
+        <div class="side-bet-update">
+          <h3>Bad Beat Update</h3>
+          <iframe src="https://docs.google.com/spreadsheets/d/1APopTbkXHZIR6w83k8KgRUxf2kPKXEOdEQxbkGuIO7E/edit?gid=0#gid=0" title="Bad Beat Bet Updates"></iframe>
+        </div>
+      
+        <div class="side-bet-update">
+          <h3>Benchwarmers Update</h3>
+          <iframe src="URL_FOR_BENCHWARMERS_IFRAME" title="Benchwarmers Bet Updates"></iframe>
+        </div>
+      
+        <div class="side-bet-update">
+          <h3>Best Week Update</h3>
+          <iframe src="URL_FOR_BEST_WEEK_IFRAME" title="Best Week Bet Updates"></iframe>
+        </div>
+      
+      </section>
+      
+      
+      
+  </main>
+  
+
+  <footer>
+    <div class="container">
+      <p>© 2025 SWI FF Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple accordion toggle script reusing your existing accordion pattern
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.classList.toggle('active');
+        const panel = header.nextElementSibling;
+        if (panel.style.display === 'block') {
+          panel.style.display = 'none';
+        } else {
+          panel.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
