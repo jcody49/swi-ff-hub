@@ -224,6 +224,7 @@ footer {
   .intro-text {
     font-size: 1rem;
     text-align: center;
+    padding-top:5%;
   }
 
   /* Center headings and make inline-block elements block for proper centering */
@@ -249,7 +250,7 @@ footer {
     text-decoration: underline;
     text-decoration-color: #00A3B4;
     justify-content: center;
-    font-size: 130%;
+    font-size: 140%;
   }
 
   h4 {
