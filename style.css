@@ -28,8 +28,26 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 1px;
 }
 
+
+h1 {
+  font-size: 3.5em;
+  display: inline-block;
+  text-align: left;
+  margin: 2rem 1rem 90px 1rem;
+  padding: 0.5rem 1rem;
+  color: #00E0FF;
+  background-color: #000;
+  border: 2px solid #00A3B4;
+  border-radius: 10px;
+  box-shadow:
+    0 0 8px #00A3B4,
+    0 0 16px #00C8D8,
+    0 0 24px #00E0FF,
+    0 0 32px #00E0FF;
+}
+
 h2 {
-  font-size: 3.2em;
+  font-size: 2.9em;
   display: inline-block;
   text-align: left;
   margin: 2rem 1rem 90px 1rem;
@@ -197,13 +215,13 @@ footer {
   max-width: 400px;
   text-align: center;
   box-sizing: border-box;
-  transition: all 0.25s ease; /* smooth animations */
+  transition: all 0.25s ease; 
 }
 
 #league-info-panel h3:hover {
   background: #e63946;
   color: #000;
-  transform: translateY(-2px); /* tiny lift effect */
+  transform: translateY(-2px); 
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -229,7 +247,6 @@ footer {
 
 
 .accordion-direction{
-  margin-top:-30px;
   margin-bottom: 45px;
   text-align: center;
   font-style: italic;
@@ -299,9 +316,14 @@ footer {
   h1, h2, h3, h4, h5 {
     text-align: center;
     display: block;
-    font-size: 145%;
+    font-size: 140%;
     padding: 0.4em;
     margin: 0.15em 0 0.35em 0;
+  }
+
+  h1{
+    font-size: 190%;
+    margin-bottom: 15px;
   }
 
   h3 {
@@ -366,5 +388,9 @@ footer {
     justify-content: start;
     padding-left: 25%;
     padding-right:15%;
+  }
+
+  .accordion-direction{
+    margin-top: 5%;
   }
 }
