@@ -394,3 +394,54 @@ footer {
     margin-top: 5%;
   }
 }
+
+/* MOBILE TOGGLE MENU FIX */
+@media (max-width: 600px) {
+  /* Navbar hidden by default */
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 145px; /* adjust below header */
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 1000;
+  }
+
+  /* Show navbar when toggle clicked */
+  .navbar.active {
+    display: flex;
+  }
+
+  /* Force nav-links vertical and full width */
+  .nav-links {
+    display: flex !important;  /* override desktop flex */
+    flex-direction: column !important;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  /* Make each link a visible block */
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    color: #fff;        /* make visible */
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .nav-links li a:hover {
+    background-color: #111;
+    color: #e63946;
+  }
+}
