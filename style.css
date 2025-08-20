@@ -380,8 +380,8 @@ footer {
   }
 
   header .logo-icon {
-    display: flex;  /* show small icon */
-    height: 100px;  /* small icon size */
+    display: flex;  
+    height: 100px;  
     cursor: pointer;
     align-items: center;
     margin-top: 15%;
@@ -395,53 +395,46 @@ footer {
   }
 }
 
-/* MOBILE TOGGLE MENU FIX */
-@media (max-width: 600px) {
-  /* Navbar hidden by default */
-  .navbar {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 145px; /* adjust below header */
-    left: 0;
-    width: 100%;
-    background-color: #000;
-    z-index: 1000;
-  }
 
-  /* Show navbar when toggle clicked */
-  .navbar.active {
-    display: flex;
-  }
+.site-header {
+  position: relative; /* now absolute children are positioned relative to header */
+}
 
-  /* Force nav-links vertical and full width */
+/* Hide nav links on mobile by default */
+@media (max-width: 880px) {
   .nav-links {
-    display: flex !important;  /* override desktop flex */
-    flex-direction: column !important;
-    align-items: center;
+    display: none;
+    flex-direction: column; /* stack links vertically */
+    gap: 1rem;
     padding: 0;
     margin: 0;
-    list-style: none;
-    width: 100%;
   }
 
-  /* Make each link a visible block */
-  .nav-links li {
-    width: 100%;
+  .nav-links.active {
+    display: flex; /* show when toggle clicked */
   }
 
   .nav-links li a {
     display: block;
-    width: 100%;
-    padding: 1rem 0;
-    color: #fff;        /* make visible */
+    color: #00A3B4;
     text-decoration: none;
-    text-align: center;
-    font-size: 1.2rem;
+    font-weight: 500;
   }
 
   .nav-links li a:hover {
-    background-color: #111;
     color: #e63946;
+  }
+}
+
+
+@media (max-width: 880px) {
+  .site-header {
+    padding-bottom: 1.5rem; /* or 2rem — enough for your stacked menu */
+  }
+}
+
+@media (max-width: 880px) {
+  header {
+    height: auto; /* let it grow with the menu */
   }
 }
