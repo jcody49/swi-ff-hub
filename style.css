@@ -264,6 +264,10 @@ footer {
   }
 }
 
+
+
+
+
 /* Small Screens (Mobile) */
 @media (max-width: 880px) {
   .container {
@@ -280,9 +284,41 @@ footer {
     height: auto;
   }
 
+  .logo {
+    width: 340px;
+    position: relative;
+    top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1.15em;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #00A3B4;
+    font-weight: 500;
+  }
+
+  .nav-links li a:hover {
+    color: #e63946;
+  }
+
   .logo-crop {
     height: 180px;
-    margin-left:50px;
+
   }
 
   #intro-split {
@@ -305,13 +341,20 @@ footer {
   }
 
   /* Center headings and make inline-block elements block for proper centering */
-  h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5 {
     text-align: center;
     display: block;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 }
 
-/* Extra Small Screens */
+
+
+
+
+
+/* SMALL SCREENS */
 @media (max-width: 600px) {
   h1, h2, h3, h4, h5 {
     text-align: center;
@@ -393,6 +436,7 @@ footer {
   .accordion-direction{
     margin-top: 5%;
   }
+
 }
 
 
@@ -403,19 +447,19 @@ footer {
 /* Hide nav links on mobile by default */
 @media (max-width: 880px) {
   .nav-links {
-    display: none;
-    flex-direction: column; /* stack links vertically */
+
+    flex-direction: column; 
     gap: 1rem;
     padding: 0;
     margin: 0;
   }
 
   .nav-links.active {
-    display: flex; /* show when toggle clicked */
+    display: flex;
   }
 
   .nav-links li a {
-    display: block;
+    display: flex;
     color: #00A3B4;
     text-decoration: none;
     font-weight: 500;
@@ -424,6 +468,7 @@ footer {
   .nav-links li a:hover {
     color: #e63946;
   }
+
 }
 
 
@@ -438,3 +483,6 @@ footer {
     height: auto; /* let it grow with the menu */
   }
 }
+
+
+
