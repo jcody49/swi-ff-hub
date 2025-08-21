@@ -560,3 +560,38 @@ footer {
       width: 90%;
   }
 }
+
+
+
+
+.main-btn-style {
+  background-color:#e63946;
+  color:#ffffff;
+  border-radius: 12px;
+  box-shadow:
+    0 0 8px #e63946,
+    0 0 16px #e63946,
+    0 0 24px #e63946,
+    0 0 32px #e63946;
+  padding:2%;
+  font-size: 1.13em;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main-btn-style:hover {
+  background-color:#00A3B4;
+  color:#ffffff;
+  border-radius: 12px;
+  box-shadow:
+    0 0 8px #00A3B4,
+    0 0 16px #00C8D8,
+    0 0 24px #00E0FF,
+    0 0 32px #00E0FF;
+  padding:2%;
+  font-size: 1.13em;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor:pointer;
+}
