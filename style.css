@@ -565,6 +565,7 @@ footer {
 
 
 .main-btn-style {
+  text-decoration: none!important; 
   background-color:#e63946;
   color:#ffffff;
   border-radius: 12px;
