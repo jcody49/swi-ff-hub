@@ -13,11 +13,18 @@
 </head>
 <body>
   <header class="site-header">
+
     <div class="logo-crop">
         <a href="index.html"><img src="assets/logo.png" alt="SWI FF Hub Logo" class="logo" /></a>
       <img src="assets/logo-icon.png" alt="SWI FF Hub Icon" class="logo-icon" />
     </div>
-    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+    <button 
+        class="nav-toggle" 
+        aria-label="Toggle navigation">
+            &#9776;
+    </button>
+    
     <nav class="navbar">
       <ul class="nav-links">
         <li class="home-link"><a href="index.html">Home</a></li>
@@ -26,14 +33,16 @@
         <li><a href="the-loot.html">The Loot</a></li>
         <li><a href="#">Help Center</a></li>
       </ul>
+      <div id="red-rectangle"></div>
     </nav>
+    
   </header>
 
   <main class="container">
     <section class="overview-wrapper">
 
         <div class="side-bet-update">
-            <h3>Food SignUp</h3>
+            <h1>Food SignUp</h1>
             <br><br>
             <iframe 
                 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQT9MZch63Rk_703uyhkfkuPPd_dfehEZGBwk_niit8CVLpUiL3R0kDZLCzmY0iymnd4MEDLH_tdhqN/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
@@ -63,20 +72,8 @@
       <p>© 2025 SWI FF Hub. All rights reserved.</p>
     </div>
   </footer>
+   
+  <script src="functions.js" defer></script>
 
-  <script>
-    // Simple accordion toggle script reusing your existing accordion pattern
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        header.classList.toggle('active');
-        const panel = header.nextElementSibling;
-        if (panel.style.display === 'block') {
-          panel.style.display = 'none';
-        } else {
-          panel.style.display = 'block';
-        }
-      });
-    });
-  </script>
 </body>
 </html>

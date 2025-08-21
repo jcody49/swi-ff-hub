@@ -130,19 +130,7 @@
     </div>
   </footer>
 
-  <script>
-    // Simple accordion toggle script reusing your existing accordion pattern
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        header.classList.toggle('active');
-        const panel = header.nextElementSibling;
-        if (panel.style.display === 'block') {
-          panel.style.display = 'none';
-        } else {
-          panel.style.display = 'block';
-        }
-      });
-    });
-  </script>
+  
+  <script src="functions.js" defer></script>
 </body>
 </html>
