@@ -615,12 +615,12 @@ footer {
     padding: 0.5rem;
     position: relative;
     text-align: center;
-    font-size: 1.2rem; /* keep names readable on mobile */
+    font-size: 1.2rem;
   }
 
   .draft-table td img {
-    width: 300px;
-    height: 300px;
+    width: 140px;
+    height: 140px;
     margin: 0.5rem auto 1rem auto;
   }
 
@@ -628,8 +628,24 @@ footer {
     margin-bottom: 2rem;
     border-bottom: 2px solid #00A3B4;
   }
-  .draft-table td img {
-    width: 140px;
-    height: 140px;
+
+  /* Neon box for player names on mobile */
+  .draft-table td:first-child {
+    display: inline-block;
+    background: #000;
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.8rem;
+    border: 2px solid #00A3B4;
+    border-radius: 10px;
+  }
+
+  .draft-table .draft-nums {
+    color: #e53935;
+    font-size: 1.9rem;
   }
 }
+.draft-table .draft-nums {
+    color: #e53935;
+    font-size: 1.9rem;
+  }
