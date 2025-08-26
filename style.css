@@ -629,7 +629,7 @@ footer {
     border-bottom: 2px solid #00A3B4;
   }
   .draft-table td img {
-    width: 190px;
-    height: 190px;
+    width: 100px;
+    height: 100px;
   }
 }
