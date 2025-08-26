@@ -563,36 +563,69 @@ footer {
 
 
 
+/*DRAFT TABLE*/
 
-.main-btn-style {
-  text-decoration: none!important; 
-  background-color:#e63946;
-  color:#ffffff;
-  border-radius: 12px;
-  box-shadow:
-    0 0 8px #e63946,
-    0 0 16px #e63946,
-    0 0 24px #e63946,
-    0 0 32px #e63946;
-  padding:2%;
-  font-size: 1.13em;
-  font-family: 'Bebas Neue', cursive;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.draft-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: center; /* center all table text by default */
 }
-.main-btn-style:hover {
-  background-color:#00A3B4;
-  color:#ffffff;
+
+.draft-table th, .draft-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #00A3B4;
+  vertical-align: middle;
+}
+
+.draft-table th {
+  color: #00E0FF;
+  font-size: 1.9rem; /* larger header text */
+  font-family: 'Bebas Neue', cursive; /* match your headings */
+}
+
+.draft-table td:first-child {
+  font-weight: 600;
+  font-size: 1.2rem; /* make names bigger */
+}
+
+.draft-table td img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow:
-    0 0 8px #00A3B4,
-    0 0 16px #00C8D8,
-    0 0 24px #00E0FF,
-    0 0 32px #00E0FF;
-  padding:2%;
-  font-size: 1.13em;
-  font-family: 'Bebas Neue', cursive;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor:pointer;
+  border: 2px solid #00A3B4;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* Responsive: stack table on small screens */
+@media (max-width: 600px) {
+  .draft-table, .draft-table thead, .draft-table tbody, .draft-table th, .draft-table td, .draft-table tr {
+    display: block;
+  }
+
+  .draft-table th {
+    display: none; /* hide headers on mobile */
+  }
+
+  .draft-table td {
+    padding: 0.5rem;
+    position: relative;
+    text-align: center;
+    font-size: 1.2rem; /* keep names readable on mobile */
+  }
+
+  .draft-table td img {
+    width: 300px;
+    height: 300px;
+    margin: 0.5rem auto 1rem auto;
+  }
+
+  .draft-table tr {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #00A3B4;
+  }
 }
