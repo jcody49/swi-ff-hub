@@ -769,21 +769,20 @@ footer {
 
 
 .main-btn-style {
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   background-color: #e63946;       /* red background */
   color: #fff;                      /* white text */
-  border: 2px solid #e63946;       /* red border */
+  border: 2px solid #ffffff;       /* red border */
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 26px;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  
-  /* Neon glow effect */
-  box-shadow: 0 0 10px #e63946, 0 0 20px #e63946, 0 0 30px #e63946;
-  text-shadow: 0 0 5px #fff;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s, border-color 0.3s;
+
 }
 
 /* Hover effect: switch to teal */
