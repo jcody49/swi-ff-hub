@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SWI FF Hub - League History</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-crop">
+      <a href="index.html"><img src="assets/logo.png" alt="SWI FF Hub Logo" class="logo" /></a>
+      <img src="assets/logo-icon.png" alt="SWI FF Hub Icon" class="logo-icon" />
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      &#9776; 
+    </button>
+    
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">League History</a></li>
+        <li><a href="draft-party.html">Draft Party</a></li>
+        <li><a href="news-and-updates.html">News & Updates</a></li>
+        <li><a href="the-loot.html">The Loot</a></li>
+        <li><a href="help-center.html">Help Center</a></li>
+      </ul>
+    </nav>
+    <div id="red-rectangle"></div>
+  </header>
+
+
+  
+
+  <main class="container">
+    <h1>League History</h1>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 SWI FF Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headers = document.querySelectorAll("#league-info-panel h3");
+    
+      headers.forEach((header) => {
+        // Grab all sibling content until the next h3
+        let panelContent = [];
+        let sibling = header.nextElementSibling;
+        while (sibling && sibling.tagName !== "H3") {
+          panelContent.push(sibling);
+          sibling = sibling.nextElementSibling;
+        }
+    
+        // Wrap content in accordion-panel div
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("accordion-panel");
+        panelContent.forEach(el => wrapper.appendChild(el));
+        header.parentNode.insertBefore(wrapper, sibling);
+    
+        // Click toggle
+        header.addEventListener("click", () => {
+          const openPanel = document.querySelector(".accordion-panel.open");
+          if (openPanel && openPanel !== wrapper) {
+            openPanel.classList.remove("open");
+            openPanel.previousElementSibling.classList.remove("active");
+          }
+          wrapper.classList.toggle("open");
+          header.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+  <script src="functions.js" defer></script>
+
+    
+
+</body>
+</html>

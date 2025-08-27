@@ -387,7 +387,6 @@ footer {
     display: flex;
     justify-content: flex-end; /* push toggle right */
     align-items: center;       /* vertical center */
-    height: 110px;
     padding: 0 1rem 0 0;
     background: #121212;
     padding-right: 30px;
