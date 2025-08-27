@@ -31,8 +31,8 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 3.5em;
-  display: inline-block;
-  text-align: left;
+
+  text-align: center;
   margin: 2rem 1rem 90px 1rem;
   padding: 0.5rem 1rem;
   color: #00E0FF;
@@ -48,8 +48,8 @@ h1 {
 
 h2 {
   font-size: 2.9em;
-  display: inline-block;
-  text-align: left;
+
+  text-align: center;
   margin: 2rem 1rem 90px 1rem;
   padding: 0.5rem 1rem;
   color: #00E0FF;
@@ -66,7 +66,7 @@ h2 {
 h3 {
   font-size: 1.95em;
   color: #e63946;
-  display: inline-block;
+
   text-align: left;
   margin: 1.7rem 0.7rem 0 0.7rem;
   padding: 0.3rem 0.8rem;
@@ -728,4 +728,79 @@ footer {
 
 .display th.sortable.sorted-asc::after {
   transform: rotate(-180deg);
+}
+
+
+
+
+/* Table Header */
+.display thead {
+  background-color: #e63946; /* Red header */
+  color: #fff;               /* White text */
+  font-weight: bold;
+  opacity:75%;
+}
+
+.display thead th {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 2px solid #e63946; /* darker red line */
+  cursor: pointer;                  /* indicate sortable */
+}
+
+/* Search Input */
+.table-search {
+  width: 300px;
+  margin: 0 auto 20px auto;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #e63946;       /* red border */
+  background-color: #000;           /* white background */
+  color: #000;                      /* black text */
+  font-size: 14px;
+}
+
+/* Placeholder text styling */
+.table-search::placeholder {
+  color: #ffffff;                  /* red placeholder text */
+  opacity: 1;                       /* ensure visibility across browsers */
+}
+
+
+.main-btn-style {
+  background-color: #e63946;       /* red background */
+  color: #fff;                      /* white text */
+  border: 2px solid #e63946;       /* red border */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  
+  /* Neon glow effect */
+  box-shadow: 0 0 10px #e63946, 0 0 20px #e63946, 0 0 30px #e63946;
+  text-shadow: 0 0 5px #fff;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s, border-color 0.3s;
+}
+
+/* Hover effect: switch to teal */
+.main-btn-style:hover {
+  background-color: #00A3B4;       /* teal background */
+  border-color: #00A3B4;           /* teal border */
+  box-shadow: 0 0 10px #00A3B4, 0 0 20px #00A3B4, 0 0 30px #00A3B4;
+  transform: translateY(-2px);
+}
+
+/* Active / pressed effect */
+.main-btn-style:active {
+  transform: translateY(0);
+}
+
+/* Focus for accessibility */
+.main-btn-style:focus {
+  outline: 3px solid #00A3B4;
+  outline-offset: 2px;
 }

@@ -96,57 +96,7 @@
       });
     });
   </script>
-  <script>
-    $(document).ready(function() {
-        $('#stats-table').DataTable({
-        pageLength: 5,
-        lengthChange: false,
-        searching: true,  // adds search/filter box
-        ordering: true    // enables column sorting
-        });
-    });
-    // --- Sorting ---
-    document.querySelectorAll('.display th.sortable').forEach((header, index) => {
-        header.addEventListener('click', () => {
-            const table = header.closest('table');
-            const tbody = table.querySelector('tbody');
-            const rows = Array.from(tbody.querySelectorAll('tr'));
-            const asc = !header.classList.contains('sorted-asc');
 
-            rows.sort((a, b) => {
-            const aText = a.children[index].textContent.trim();
-            const bText = b.children[index].textContent.trim();
-
-            // Check if numeric
-            if (!isNaN(aText) && !isNaN(bText)) {
-                return asc ? aText - bText : bText - aText;
-            } else {
-                return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
-            }
-            });
-
-            // Remove previous rows
-            tbody.innerHTML = '';
-            rows.forEach(row => tbody.appendChild(row));
-
-            // Update sort classes
-            table.querySelectorAll('th').forEach(th => th.classList.remove('sorted-asc', 'sorted-desc'));
-            header.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
-        });
-    });
-
-    // --- Search Filter ---
-    document.getElementById('table-search').addEventListener('input', (e) => {
-        const filter = e.target.value.toLowerCase();
-        const rows = document.querySelectorAll('#stats-table tbody tr');
-
-        rows.forEach(row => {
-            const text = row.children[0].textContent.toLowerCase(); // filter by Manager name
-            row.style.display = text.includes(filter) ? '' : 'none';
-        });
-    });
-
-</script>
   <script src="functions.js" defer></script>
 
     
