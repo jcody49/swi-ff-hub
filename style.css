@@ -651,123 +651,7 @@ footer {
 
 
 
-
-
-/* Basic Table Styling */
-.display {
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  font-family: Arial, sans-serif;
-  background-color: #1e1e1e;
-  color: #f1f1f1;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Table Header */
-.display thead {
-  background-color: #2c2c2c;
-  font-weight: bold;
-}
-
-.display thead th {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 2px solid #444;
-}
-
-/* Table Body */
-.display tbody tr {
-  transition: background-color 0.3s;
-}
-
-.display tbody tr:nth-child(even) {
-  background-color: #292929;
-}
-
-.display tbody tr:hover {
-  background-color: #444;
-  cursor: pointer;
-}
-
-/* Table Cells */
-.display td {
-  padding: 10px 15px;
-  border-bottom: 1px solid #333;
-}
-
-/* Search Input (if using one) */
-.table-search {
-  width: 300px;
-  margin: 0 auto 20px auto;
-  display: block;
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #555;
-  background-color: #1e1e1e;
-  color: #f1f1f1;
-  font-size: 14px;
-}
-
-/* Optional: Sort Icons */
-.display th.sortable {
-  position: relative;
-  cursor: pointer;
-}
-
-.display th.sortable::after {
-  content: "▼";
-  font-size: 0.6em;
-  position: absolute;
-  right: 10px;
-  opacity: 0.4;
-  transition: transform 0.2s;
-}
-
-.display th.sortable.sorted-asc::after {
-  transform: rotate(-180deg);
-}
-
-
-
-
-/* Table Header */
-.display thead {
-  background-color: #e63946; /* Red header */
-  color: #fff;               /* White text */
-  font-weight: bold;
-  opacity:75%;
-}
-
-.display thead th {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 2px solid #e63946; /* darker red line */
-  cursor: pointer;                  /* indicate sortable */
-}
-
-/* Search Input */
-.table-search {
-  width: 300px;
-  margin: 0 auto 20px auto;
-  display: block;
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #e63946;       /* red border */
-  background-color: #000;           /* white background */
-  color: #000;                      /* black text */
-  font-size: 14px;
-}
-
-/* Placeholder text styling */
-.table-search::placeholder {
-  color: #ffffff;                  /* red placeholder text */
-  opacity: 1;                       /* ensure visibility across browsers */
-}
-
-
+/* Scrollable container */
 .stats-table-container {
   width: 90%;
   margin: 20px auto;
@@ -779,19 +663,83 @@ footer {
   padding: 0.5em 0;
 }
 
-.stats-table-container #stats-table {
+/* Table styling */
+#stats-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate; /* critical for sticky columns */
+  border-spacing: 0;         /* remove gaps */
+  font-family: Arial, sans-serif;
+  color: #f1f1f1;
 }
 
-.stats-table-container #stats-table td,
-.stats-table-container #stats-table th {
+/* Header row */
+#stats-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #e63946;
+  color: #fff;
+  font-weight: bold;
+  z-index: 3;
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 2px solid #e63946;
+  cursor: pointer;
   white-space: nowrap;
 }
 
+/* Sticky first column */
+#stats-table th:first-child,
+#stats-table td:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #1e1e1e; /* matches table body */
+  color: #f1f1f1;
+  z-index: 2;
+  white-space: nowrap;
+  border-right: 2px solid #e63946; /* visual separation */
+}
 
+/* Top-left cell (header + first column) */
+#stats-table thead th:first-child {
+  z-index: 4;
+  background-color: #e63946; /* matches header */
+}
 
+/* Table rows */
+#stats-table tbody tr:nth-child(even) {
+  background-color: #292929;
+}
 
+#stats-table tbody tr:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+/* Table cells */
+#stats-table td,
+#stats-table th {
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+  white-space: nowrap;
+}
+
+/* Optional: search input */
+.table-search {
+  width: 300px;
+  margin: 0 auto 20px auto;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #e63946;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+}
+
+.table-search::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
 
 
 
