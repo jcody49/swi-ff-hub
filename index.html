@@ -282,38 +282,7 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const headers = document.querySelectorAll("#league-info-panel h3");
-    
-      headers.forEach((header) => {
-        // Grab all sibling content until the next h3
-        let panelContent = [];
-        let sibling = header.nextElementSibling;
-        while (sibling && sibling.tagName !== "H3") {
-          panelContent.push(sibling);
-          sibling = sibling.nextElementSibling;
-        }
-    
-        // Wrap content in accordion-panel div
-        const wrapper = document.createElement("div");
-        wrapper.classList.add("accordion-panel");
-        panelContent.forEach(el => wrapper.appendChild(el));
-        header.parentNode.insertBefore(wrapper, sibling);
-    
-        // Click toggle
-        header.addEventListener("click", () => {
-          const openPanel = document.querySelector(".accordion-panel.open");
-          if (openPanel && openPanel !== wrapper) {
-            openPanel.classList.remove("open");
-            openPanel.previousElementSibling.classList.remove("active");
-          }
-          wrapper.classList.toggle("open");
-          header.classList.toggle("active");
-        });
-      });
-    });
-  </script>
+
   <script src="functions.js" defer></script>
 
     
