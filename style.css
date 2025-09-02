@@ -811,9 +811,8 @@ footer {
 
 
 
-
+/*DRAFT PARTY UPDATE LIST*/
 .draft-party-update-list li::marker {
-  color: #e63946;          /* bullet color */
-  font-size: 1.2em;    /* bullet size */
-       /* custom bullet (optional) */
+  color: #e63946;         
+  font-size: 1.2em;   
 }
