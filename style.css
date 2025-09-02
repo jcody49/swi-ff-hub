@@ -768,6 +768,35 @@ footer {
 }
 
 
+.stats-table-container {
+  width: 90%;
+  margin: 20px auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-color: #1e1e1e;
+  padding: 0.5em 0;
+}
+
+.stats-table-container #stats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats-table-container #stats-table td,
+.stats-table-container #stats-table th {
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
 .main-btn-style {
   font-family: 'Bebas Neue', cursive;
   text-transform: uppercase;
