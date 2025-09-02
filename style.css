@@ -803,3 +803,17 @@ footer {
   outline: 3px solid #00A3B4;
   outline-offset: 2px;
 }
+
+
+
+
+
+
+
+
+
+.draft-party-update-list li::marker {
+  color: #e63946;          /* bullet color */
+  font-size: 1.2em;    /* bullet size */
+       /* custom bullet (optional) */
+}
